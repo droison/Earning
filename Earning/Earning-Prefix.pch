@@ -1,0 +1,21 @@
+//
+//  Earning-Prefix.h
+//  Earning
+//
+//  Created by 淞 柴 on 15/4/14.
+//  Copyright (c) 2015年 mumiao. All rights reserved.
+//
+
+#ifndef Earning_Earning_Prefix_h
+#define Earning_Earning_Prefix_h
+
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+#import "MMLog.h"
+#import "UIViewExtend.h"
+#import "UiUtil.h"
+
+
+
+#define IsEmpty(str) (![str respondsToSelector:@selector(isEqualToString:)] || [str isEqualToString:@""])
+#endif

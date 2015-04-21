@@ -7,17 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
-@interface CategoryItem : NSObject
-
-@property (nonatomic, assign) int localId;
-@property (nonatomic, strong) NSString* name;
-@property (nonatomic, strong) NSString* code;
-@property (nonatomic, assign) double curPrice; //保存一份，应该和PriceDB中对应的最后一条相同
-@property (nonatomic, assign) int curPriceTime; //保存一份，应该和PriceDB中对应的最后一条相同
-@property (nonatomic, assign) double totalNumber; //总持股数量，每次增删后统计
-@property (nonatomic, assign) double totalPrice; //总价格，每次增删后统计
-@end
+#import "CategoryItem.h"
 
 @interface CategoryDBMgr : NSObject
 
@@ -26,6 +16,8 @@
 - (void) insert:(CategoryItem*)item;
 - (void) deleteById:(int)localId;
 - (void) update:(CategoryItem*)item;
+- (void) update:(CategoryItem*)item withCode:(NSString*)code;
 
+- (int) selectLocalIdByCode:(NSString*)code;
 - (NSArray*) selectAll;
 @end

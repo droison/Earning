@@ -7,14 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
-@interface PriceItem : NSObject
-
-@property (nonatomic, assign) int localId;
-@property (nonatomic, assign) double curPrice;
-@property (nonatomic, assign) int curPriceTime; //最后一次更新价格的时间
-@property (nonatomic, assign) int categoryLocalId; //外键
-@end
+#import "PriceItem.h"
 
 @interface PriceDBMgr : NSObject
 
@@ -23,6 +16,8 @@
 - (void) insert:(PriceItem*)item;
 - (void) deleteById:(int)localId;
 - (void) update:(PriceItem*)item;
+- (void) insertOrUpdate:(PriceItem*)item;
 
+- (int) selectLocalIdByCategoryLocalId:(int)categoryLocalId PriceTime:(NSString*)priceTime;
 - (NSArray*) selectAll;
 @end

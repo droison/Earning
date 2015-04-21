@@ -8,6 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		8335E59083A0FB094E3549E0 /* libPods-Earning.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 51B954EF6ADC6531F2F75B44 /* libPods-Earning.a */; };
+		E45272CA1AE016DE00913342 /* DateFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = E45272C91AE016DE00913342 /* DateFormat.m */; };
+		E45272DB1AE34E6C00913342 /* EarningMainService.mm in Sources */ = {isa = PBXBuildFile; fileRef = E45272DA1AE34E6C00913342 /* EarningMainService.mm */; };
+		E45272DF1AE3500E00913342 /* CategoryItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E45272DE1AE3500E00913342 /* CategoryItem.m */; };
+		E45272E21AE3504E00913342 /* DealItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E45272E11AE3504E00913342 /* DealItem.m */; };
+		E45272E51AE3507100913342 /* PriceItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E45272E41AE3507100913342 /* PriceItem.m */; };
+		E462C9FF1AE6316F0064EDBD /* DataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = E462C9FE1AE6316F0064EDBD /* DataRequest.m */; };
+		E462CA0C1AE646DE0064EDBD /* AddCategoryViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = E462CA031AE646DE0064EDBD /* AddCategoryViewController.mm */; };
+		E462CA0D1AE646DE0064EDBD /* AddDealViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = E462CA051AE646DE0064EDBD /* AddDealViewController.mm */; };
+		E462CA0E1AE646DE0064EDBD /* BaseViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = E462CA071AE646DE0064EDBD /* BaseViewController.mm */; };
+		E462CA0F1AE646DE0064EDBD /* CategoryProfileViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = E462CA091AE646DE0064EDBD /* CategoryProfileViewController.mm */; };
+		E462CA101AE646DE0064EDBD /* RootViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = E462CA0B1AE646DE0064EDBD /* RootViewController.mm */; };
+		E462CA131AE646F50064EDBD /* BaseTableViewCell.mm in Sources */ = {isa = PBXBuildFile; fileRef = E462CA121AE646F50064EDBD /* BaseTableViewCell.mm */; };
+		E462CA191AE6635F0064EDBD /* CSExtensionCenter.mm in Sources */ = {isa = PBXBuildFile; fileRef = E462CA161AE6635F0064EDBD /* CSExtensionCenter.mm */; };
+		E462CA1A1AE6635F0064EDBD /* CSServiceCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = E462CA181AE6635F0064EDBD /* CSServiceCenter.m */; };
+		E462CA1D1AE663920064EDBD /* ObjcRuntimeUtil.mm in Sources */ = {isa = PBXBuildFile; fileRef = E462CA1C1AE663920064EDBD /* ObjcRuntimeUtil.mm */; };
 		E4979FE01ADD4B6900D04818 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E4979FDF1ADD4B6900D04818 /* main.m */; };
 		E4979FE31ADD4B6900D04818 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E4979FE21ADD4B6900D04818 /* AppDelegate.m */; };
 		E4979FEB1ADD4B6900D04818 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4979FEA1ADD4B6900D04818 /* Images.xcassets */; };
@@ -19,13 +34,41 @@
 		E4DBFC731AE00F870016BCE1 /* DeviceInfo.mm in Sources */ = {isa = PBXBuildFile; fileRef = E4DBFC6C1AE00F870016BCE1 /* DeviceInfo.mm */; };
 		E4DBFC741AE00F870016BCE1 /* UiUtil.mm in Sources */ = {isa = PBXBuildFile; fileRef = E4DBFC701AE00F870016BCE1 /* UiUtil.mm */; };
 		E4DBFC751AE00F870016BCE1 /* UIViewExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = E4DBFC721AE00F870016BCE1 /* UIViewExtend.m */; };
-		E4DBFC7B1AE00FDD0016BCE1 /* AddCategoryViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = E4DBFC781AE00FDD0016BCE1 /* AddCategoryViewController.mm */; };
-		E4DBFC7C1AE00FDD0016BCE1 /* RootViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = E4DBFC7A1AE00FDD0016BCE1 /* RootViewController.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		51B954EF6ADC6531F2F75B44 /* libPods-Earning.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Earning.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D34E2E1AB5840F4253ED000D /* Pods-Earning.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Earning.release.xcconfig"; path = "Pods/Target Support Files/Pods-Earning/Pods-Earning.release.xcconfig"; sourceTree = "<group>"; };
+		E45272C81AE016DE00913342 /* DateFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateFormat.h; sourceTree = "<group>"; };
+		E45272C91AE016DE00913342 /* DateFormat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateFormat.m; sourceTree = "<group>"; };
+		E45272D91AE34E6C00913342 /* EarningMainService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EarningMainService.h; sourceTree = "<group>"; };
+		E45272DA1AE34E6C00913342 /* EarningMainService.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = EarningMainService.mm; sourceTree = "<group>"; };
+		E45272DD1AE3500E00913342 /* CategoryItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryItem.h; sourceTree = "<group>"; };
+		E45272DE1AE3500E00913342 /* CategoryItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryItem.m; sourceTree = "<group>"; };
+		E45272E01AE3504E00913342 /* DealItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DealItem.h; sourceTree = "<group>"; };
+		E45272E11AE3504E00913342 /* DealItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DealItem.m; sourceTree = "<group>"; };
+		E45272E31AE3507100913342 /* PriceItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PriceItem.h; sourceTree = "<group>"; };
+		E45272E41AE3507100913342 /* PriceItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PriceItem.m; sourceTree = "<group>"; };
+		E462C9FD1AE6316F0064EDBD /* DataRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataRequest.h; sourceTree = "<group>"; };
+		E462C9FE1AE6316F0064EDBD /* DataRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataRequest.m; sourceTree = "<group>"; };
+		E462CA021AE646DE0064EDBD /* AddCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddCategoryViewController.h; sourceTree = "<group>"; };
+		E462CA031AE646DE0064EDBD /* AddCategoryViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AddCategoryViewController.mm; sourceTree = "<group>"; };
+		E462CA041AE646DE0064EDBD /* AddDealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddDealViewController.h; sourceTree = "<group>"; };
+		E462CA051AE646DE0064EDBD /* AddDealViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AddDealViewController.mm; sourceTree = "<group>"; };
+		E462CA061AE646DE0064EDBD /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		E462CA071AE646DE0064EDBD /* BaseViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BaseViewController.mm; sourceTree = "<group>"; };
+		E462CA081AE646DE0064EDBD /* CategoryProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryProfileViewController.h; sourceTree = "<group>"; };
+		E462CA091AE646DE0064EDBD /* CategoryProfileViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CategoryProfileViewController.mm; sourceTree = "<group>"; };
+		E462CA0A1AE646DE0064EDBD /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		E462CA0B1AE646DE0064EDBD /* RootViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RootViewController.mm; sourceTree = "<group>"; };
+		E462CA111AE646F50064EDBD /* BaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewCell.h; sourceTree = "<group>"; };
+		E462CA121AE646F50064EDBD /* BaseTableViewCell.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BaseTableViewCell.mm; sourceTree = "<group>"; };
+		E462CA151AE6635F0064EDBD /* CSExtensionCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSExtensionCenter.h; sourceTree = "<group>"; };
+		E462CA161AE6635F0064EDBD /* CSExtensionCenter.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CSExtensionCenter.mm; sourceTree = "<group>"; };
+		E462CA171AE6635F0064EDBD /* CSServiceCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSServiceCenter.h; sourceTree = "<group>"; };
+		E462CA181AE6635F0064EDBD /* CSServiceCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSServiceCenter.m; sourceTree = "<group>"; };
+		E462CA1B1AE663920064EDBD /* ObjcRuntimeUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjcRuntimeUtil.h; sourceTree = "<group>"; };
+		E462CA1C1AE663920064EDBD /* ObjcRuntimeUtil.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ObjcRuntimeUtil.mm; sourceTree = "<group>"; };
 		E4979FDA1ADD4B6900D04818 /* Earning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Earning.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4979FDE1ADD4B6900D04818 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E4979FDF1ADD4B6900D04818 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -49,10 +92,6 @@
 		E4DBFC701AE00F870016BCE1 /* UiUtil.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = UiUtil.mm; sourceTree = "<group>"; };
 		E4DBFC711AE00F870016BCE1 /* UIViewExtend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewExtend.h; sourceTree = "<group>"; };
 		E4DBFC721AE00F870016BCE1 /* UIViewExtend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewExtend.m; sourceTree = "<group>"; };
-		E4DBFC771AE00FDD0016BCE1 /* AddCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddCategoryViewController.h; sourceTree = "<group>"; };
-		E4DBFC781AE00FDD0016BCE1 /* AddCategoryViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AddCategoryViewController.mm; sourceTree = "<group>"; };
-		E4DBFC791AE00FDD0016BCE1 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
-		E4DBFC7A1AE00FDD0016BCE1 /* RootViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RootViewController.mm; sourceTree = "<group>"; };
 		ECA0C4D021A780C53BE3F0B7 /* Pods-Earning.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Earning.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Earning/Pods-Earning.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -85,6 +124,63 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		E45272D81AE34E6C00913342 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				E45272D91AE34E6C00913342 /* EarningMainService.h */,
+				E45272DA1AE34E6C00913342 /* EarningMainService.mm */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		E45272DC1AE34FF600913342 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E45272DD1AE3500E00913342 /* CategoryItem.h */,
+				E45272DE1AE3500E00913342 /* CategoryItem.m */,
+				E45272E01AE3504E00913342 /* DealItem.h */,
+				E45272E11AE3504E00913342 /* DealItem.m */,
+				E45272E31AE3507100913342 /* PriceItem.h */,
+				E45272E41AE3507100913342 /* PriceItem.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E462C9FC1AE6316F0064EDBD /* DataRequest */ = {
+			isa = PBXGroup;
+			children = (
+				E462C9FD1AE6316F0064EDBD /* DataRequest.h */,
+				E462C9FE1AE6316F0064EDBD /* DataRequest.m */,
+			);
+			path = DataRequest;
+			sourceTree = "<group>";
+		};
+		E462CA001AE646DE0064EDBD /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				E462CA111AE646F50064EDBD /* BaseTableViewCell.h */,
+				E462CA121AE646F50064EDBD /* BaseTableViewCell.mm */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		E462CA011AE646DE0064EDBD /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E462CA021AE646DE0064EDBD /* AddCategoryViewController.h */,
+				E462CA031AE646DE0064EDBD /* AddCategoryViewController.mm */,
+				E462CA041AE646DE0064EDBD /* AddDealViewController.h */,
+				E462CA051AE646DE0064EDBD /* AddDealViewController.mm */,
+				E462CA061AE646DE0064EDBD /* BaseViewController.h */,
+				E462CA071AE646DE0064EDBD /* BaseViewController.mm */,
+				E462CA081AE646DE0064EDBD /* CategoryProfileViewController.h */,
+				E462CA091AE646DE0064EDBD /* CategoryProfileViewController.mm */,
+				E462CA0A1AE646DE0064EDBD /* RootViewController.h */,
+				E462CA0B1AE646DE0064EDBD /* RootViewController.mm */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		E4979FD11ADD4B6900D04818 = {
 			isa = PBXGroup;
 			children = (
@@ -106,12 +202,16 @@
 		E4979FDC1ADD4B6900D04818 /* Earning */ = {
 			isa = PBXGroup;
 			children = (
+				E4DBFC6A1AE00F870016BCE1 /* Foundation */,
 				E4979FE11ADD4B6900D04818 /* AppDelegate.h */,
+				E462C9FC1AE6316F0064EDBD /* DataRequest */,
 				E4979FE21ADD4B6900D04818 /* AppDelegate.m */,
+				E45272DC1AE34FF600913342 /* Model */,
+				E4DBFC761AE00FDD0016BCE1 /* View */,
+				E45272D81AE34E6C00913342 /* Service */,
 				E4B112431ADD4EB800817AE6 /* LocalData */,
 				E4979FEA1ADD4B6900D04818 /* Images.xcassets */,
 				E4979FEC1ADD4B6900D04818 /* LaunchScreen.xib */,
-				E4DBFC761AE00FDD0016BCE1 /* View */,
 				E4979FDD1ADD4B6900D04818 /* Supporting Files */,
 				E4B112501ADD4FD700817AE6 /* Earning-Prefix.pch */,
 			);
@@ -130,7 +230,6 @@
 		E4B112431ADD4EB800817AE6 /* LocalData */ = {
 			isa = PBXGroup;
 			children = (
-				E4DBFC6A1AE00F870016BCE1 /* Foundation */,
 				E4D8ACDD1ADFF5C00030CF15 /* CategoryDBMgr.h */,
 				E4D8ACDE1ADFF5C00030CF15 /* CategoryDBMgr.m */,
 				E4B112511ADD540600817AE6 /* DealFlowDBMgr.h */,
@@ -146,6 +245,12 @@
 		E4DBFC6A1AE00F870016BCE1 /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
+				E462CA151AE6635F0064EDBD /* CSExtensionCenter.h */,
+				E462CA161AE6635F0064EDBD /* CSExtensionCenter.mm */,
+				E462CA171AE6635F0064EDBD /* CSServiceCenter.h */,
+				E462CA181AE6635F0064EDBD /* CSServiceCenter.m */,
+				E462CA1B1AE663920064EDBD /* ObjcRuntimeUtil.h */,
+				E462CA1C1AE663920064EDBD /* ObjcRuntimeUtil.mm */,
 				E4DBFC6B1AE00F870016BCE1 /* DeviceInfo.h */,
 				E4DBFC6C1AE00F870016BCE1 /* DeviceInfo.mm */,
 				E4DBFC6D1AE00F870016BCE1 /* Tools */,
@@ -154,13 +259,16 @@
 				E4DBFC711AE00F870016BCE1 /* UIViewExtend.h */,
 				E4DBFC721AE00F870016BCE1 /* UIViewExtend.m */,
 			);
-			path = Foundation;
+			name = Foundation;
+			path = LocalData/Foundation;
 			sourceTree = "<group>";
 		};
 		E4DBFC6D1AE00F870016BCE1 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
 				E4DBFC6E1AE00F870016BCE1 /* MMLog.h */,
+				E45272C81AE016DE00913342 /* DateFormat.h */,
+				E45272C91AE016DE00913342 /* DateFormat.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -168,10 +276,8 @@
 		E4DBFC761AE00FDD0016BCE1 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				E4DBFC771AE00FDD0016BCE1 /* AddCategoryViewController.h */,
-				E4DBFC781AE00FDD0016BCE1 /* AddCategoryViewController.mm */,
-				E4DBFC791AE00FDD0016BCE1 /* RootViewController.h */,
-				E4DBFC7A1AE00FDD0016BCE1 /* RootViewController.mm */,
+				E462CA001AE646DE0064EDBD /* Cell */,
+				E462CA011AE646DE0064EDBD /* ViewController */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -280,17 +386,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E4DBFC7C1AE00FDD0016BCE1 /* RootViewController.mm in Sources */,
 				E4B1124A1ADD4EB800817AE6 /* DBBase.m in Sources */,
-				E4DBFC7B1AE00FDD0016BCE1 /* AddCategoryViewController.mm in Sources */,
 				E4D8ACDF1ADFF5C00030CF15 /* CategoryDBMgr.m in Sources */,
+				E462CA1D1AE663920064EDBD /* ObjcRuntimeUtil.mm in Sources */,
+				E462CA191AE6635F0064EDBD /* CSExtensionCenter.mm in Sources */,
+				E462CA0D1AE646DE0064EDBD /* AddDealViewController.mm in Sources */,
 				E4979FE31ADD4B6900D04818 /* AppDelegate.m in Sources */,
 				E4DBFC751AE00F870016BCE1 /* UIViewExtend.m in Sources */,
 				E4B112531ADD540600817AE6 /* DealFlowDBMgr.m in Sources */,
+				E462CA0F1AE646DE0064EDBD /* CategoryProfileViewController.mm in Sources */,
+				E45272DB1AE34E6C00913342 /* EarningMainService.mm in Sources */,
 				E4979FE01ADD4B6900D04818 /* main.m in Sources */,
+				E45272E21AE3504E00913342 /* DealItem.m in Sources */,
 				E4D8ACE21ADFF62C0030CF15 /* PriceDBMgr.m in Sources */,
+				E45272E51AE3507100913342 /* PriceItem.m in Sources */,
+				E462CA131AE646F50064EDBD /* BaseTableViewCell.mm in Sources */,
+				E462CA0C1AE646DE0064EDBD /* AddCategoryViewController.mm in Sources */,
 				E4DBFC741AE00F870016BCE1 /* UiUtil.mm in Sources */,
+				E462CA0E1AE646DE0064EDBD /* BaseViewController.mm in Sources */,
+				E45272CA1AE016DE00913342 /* DateFormat.m in Sources */,
+				E462CA101AE646DE0064EDBD /* RootViewController.mm in Sources */,
+				E462CA1A1AE6635F0064EDBD /* CSServiceCenter.m in Sources */,
 				E4DBFC731AE00F870016BCE1 /* DeviceInfo.mm in Sources */,
+				E45272DF1AE3500E00913342 /* CategoryItem.m in Sources */,
+				E462C9FF1AE6316F0064EDBD /* DataRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,6 +519,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -413,6 +533,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

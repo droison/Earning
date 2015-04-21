@@ -16,6 +16,5 @@
 #import "UiUtil.h"
 
 
-
 #define IsEmpty(str) (![str respondsToSelector:@selector(isEqualToString:)] || [str isEqualToString:@""])
 #endif

@@ -11,11 +11,6 @@
 
 #define TableName @"Price"
 
-@implementation PriceItem
-
-
-@end
-
 @implementation PriceDBMgr
 
 + (PriceDBMgr*)sharedInstance
@@ -46,33 +41,59 @@
  */
 - (void)createTable
 {
-    NSString *createStr = [NSString stringWithFormat:@"CREATE TABLE IF NOT EXISTS '%@' ('localId' INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL UNIQUE, 'curPrice' DOUBLE, 'curPriceTime' INTEGER, 'categoryLocalId' INTEGER)", TableName];
+    NSString *createStr = [NSString stringWithFormat:@"CREATE TABLE IF NOT EXISTS '%@' ('localId' INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL UNIQUE, 'curPrice' DOUBLE, 'curPriceTime' VARCHAR, 'categoryLocalId' INTEGER)", TableName];
     BOOL success = [DefaultDB executeUpdate:createStr];
     if (!success) {
-        LogD(@"Create Table Error, TableName %@", TableName);
+        LogD(@"Create Table Error, TableName '%@'", TableName);
     }
 }
 
 - (void) insert:(PriceItem*)item
 {
     //(localId, dealTime, name, code, number, price, fee, curPrice, curPriceTime, curState) VALUES (%d, %d, '%@', '%@', %f, %f, %f, %f, %d, %d)
-    NSString *insertStr = [NSString stringWithFormat:@"REPLACE INTO %@ (curPrice, curPriceTime, categoryLocalId) VALUES (%f, %d, %d)", TableName, item.curPrice, item.curPriceTime, item.categoryLocalId];
+    NSString *insertStr = [NSString stringWithFormat:@"REPLACE INTO '%@' (curPrice, curPriceTime, categoryLocalId) VALUES (%f, '%@', %d)", TableName, item.curPrice, item.curPriceTime, item.categoryLocalId];
     
     [EarnDBBase executeUpdateSql:insertStr];
 }
 
 - (void) deleteById:(int)localId
 {
-    NSString *sql = [NSString stringWithFormat:@"delete from %@ where localId=%d", TableName, localId];
+    NSString *sql = [NSString stringWithFormat:@"delete from '%@' where localId=%d", TableName, localId];
     [EarnDBBase executeUpdateSql:sql];
 }
 
 - (void) update:(PriceItem*)item
 {
-    NSString *sql = [NSString stringWithFormat:@"update %@ set curPrice=%f, curPriceTime=%d, categoryLocalId=%d where localId=%d", TableName, item.curPrice, item.curPriceTime, item.categoryLocalId, item.localId];
+    NSString *sql = [NSString stringWithFormat:@"update '%@' set curPrice=%f, curPriceTime='%@', categoryLocalId=%d where localId=%d", TableName, item.curPrice, item.curPriceTime, item.categoryLocalId, item.localId];
     
     [EarnDBBase executeUpdateSql:sql];
-    
+}
+
+- (void) insertOrUpdate:(PriceItem*)item
+{
+    item.localId = [self selectLocalIdByCategoryLocalId:item.categoryLocalId PriceTime:item.curPriceTime];
+    if (item.localId == -1) //不存在
+    {
+        [self insert:item];
+    }
+    else
+    {
+//        [self update:item];
+    }
+}
+
+- (int) selectLocalIdByCategoryLocalId:(int)categoryLocalId PriceTime:(NSString*)priceTime
+{
+    NSString *queryStr = [NSString stringWithFormat:@"SELECT localId FROM '%@' where categoryLocalId=%d and curPriceTime='%@'", TableName, categoryLocalId, priceTime];
+    FMResultSet *result = [DefaultDB executeQuery:queryStr];
+    if ([result next]) {
+        int localId = [result intForColumnIndex:0];
+        return localId;
+    }
+    else
+    {
+        return -1;
+    }
 }
 
 - (NSArray*) selectAll
@@ -81,7 +102,7 @@
         return nil;
     }
     
-    NSString *queryStr = [NSString stringWithFormat:@"SELECT * FROM %@", TableName];
+    NSString *queryStr = [NSString stringWithFormat:@"SELECT * FROM '%@'", TableName];
     
     FMResultSet *result = [DefaultDB executeQuery:queryStr];
     
@@ -90,7 +111,7 @@
         PriceItem* item = [[PriceItem alloc]init];
         item.localId = [result intForColumnIndex:0];
         item.curPrice = [result doubleForColumnIndex:1];
-        item.curPriceTime = [result intForColumnIndex:2];
+        item.curPriceTime = [result stringForColumnIndex:2];
         item.categoryLocalId = [result intForColumnIndex:3];
         [resultArr addObject:item];
     }

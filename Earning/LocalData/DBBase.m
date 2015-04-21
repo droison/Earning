@@ -9,7 +9,8 @@
 #import "DBBase.h"
 #import "FMDatabase.h"
 
-#define DefaultName @"Earning.db"
+#define DBVersion 1  //版本号从1开始，递增处理
+#define DefaultName [NSString stringWithFormat:@"Earning%d.db", DBVersion]
 
 @implementation DBBase
 
@@ -116,7 +117,7 @@ static DBBase *instance = nil;
     }
     BOOL isSuccess = [db executeUpdate:updateSql];
     if (!isSuccess) {
-        LogD(@"executeUpdateWithTableName Error, UpdateSQL %@", updateSql);
+        LogW(@"executeUpdateWithTableName Error, UpdateSQL %@", updateSql);
     }
 }
 
@@ -128,7 +129,7 @@ static DBBase *instance = nil;
     }
     BOOL isSuccess = [db executeUpdate:sql withParameterDictionary:arguments];
     if (!isSuccess) {
-        LogD(@"executeUpdateWithTableName Error, UpdateSQL %@ and Parameter: %@", sql, arguments);
+        LogW(@"executeUpdateWithTableName Error, UpdateSQL %@ and Parameter: %@", sql, arguments);
     }
     return isSuccess;
 }

@@ -8,14 +8,19 @@
 
 #import "AppDelegate.h"
 #import "RootViewController.h"
+#import "CSServiceCenter.h"
 
 @interface AppDelegate ()
+{
+    CSServiceCenter* _serviceCenter;
+}
 
 @end
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    _serviceCenter = [[CSServiceCenter alloc]init];
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     RootViewController* rootViewController = [[RootViewController alloc]init];
     self.window.rootViewController = [[UINavigationController alloc]initWithRootViewController:rootViewController];

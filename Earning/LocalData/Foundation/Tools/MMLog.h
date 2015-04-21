@@ -11,7 +11,7 @@
 #define LogW(format, ...) NSLog(@"-[WARN] %s(%d行): " format, __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
 #define LogE(format, ...) NSLog(@"-[ERROR] %s(%d行): " format, __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
 #ifdef DEBUG
-#define LogD(format, ...)  NSLog(@"-[DEBUG] %s(%d行): " format, __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
+#define LogD(format, ...)  LogI(format, ##__VA_ARGS__)
 #else
 #define LogD(format, ...)
 #endif

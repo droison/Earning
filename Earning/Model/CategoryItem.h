@@ -24,6 +24,8 @@ typedef enum : int{
 @property (nonatomic, assign) double totalPrice; //总成本，名字没有起好 （总价值只需要curPrice*totalNumber就好了，不需要单独存）
 @property (nonatomic, assign) CategoryEnum type;
 @property (nonatomic, assign) BOOL shouldAutoSync; //是否何以自动查询数据，默认为NO
-@property (nonatomic, assign) double gsPrice; //估算值保存一份，应该和PriceDB中对应的最后一条相同
-@property (nonatomic, strong) NSString* gsPriceTime; //估算时间保存一份，应该和PriceDB中对应的最后一条相同
+@property (nonatomic, assign) double gsPrice; //估算值保存一份
+@property (nonatomic, strong) NSString* gsPriceTime; //估算时间保存一份
+@property (nonatomic, assign) double curZZL; //当日增长率 和 curPrice curPriceTime对应
+@property (nonatomic, assign) double gsZZL; //估算增长率 和 gsPrice gsPriceTime对应
 @end

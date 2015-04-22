@@ -93,6 +93,7 @@
         [_dataRequest sendRequestWithUrl:DataRequestFavInfo params:params success:^(id item) {
             if (item!=nil && [item isKindOfClass:[NSArray class]])
             {
+                LogD(@"获取基金当前信息：%@", item);
                 for (NSDictionary* dic in item) {
                     int categoryLocalId = [_categoryDBMgr selectLocalIdByCode:dic[@"fundcode"]];
                     if (categoryLocalId == -1) {
@@ -114,6 +115,8 @@
                     categoryItem.curPriceTime = dic[@"jzrq"];
                     categoryItem.name = dic[@"name"];
                     categoryItem.shouldAutoSync = YES;
+                    categoryItem.curZZL = [dic[@"rzzl"] doubleValue];
+                    categoryItem.gsZZL = [dic[@"gszzl"] doubleValue];
                     [_categoryDBMgr update:categoryItem withCode:dic[@"fundcode"]];
                     
                 }
@@ -125,4 +128,5 @@
         }];
     }
 }
+
 @end

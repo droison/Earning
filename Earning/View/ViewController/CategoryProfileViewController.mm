@@ -12,6 +12,7 @@
 #import "EarningMainService.h"
 #import "BaseTableViewCell.h"
 #import "CSExtensionCenter.h"
+#import "EarningUtil.h"
 
 @interface CategoryProfileViewController ()<IDataChangeExt>
 {
@@ -93,6 +94,7 @@
     [self refreshHeadLabel];
     _headLabel.numberOfLines = 0;
     [_headLabel sizeToFit];
+    _headLabel.width = UIWidth - 10;
     [headView addSubview:_headLabel];
     headView.height = _headLabel.height;
     if (_categoryItem.shouldAutoSync == NO)
@@ -138,7 +140,7 @@
 {
     double curTotal = _categoryItem.totalNumber * _categoryItem.curPrice;
     double earn = curTotal - _categoryItem.totalPrice;
-    _headLabel.text = [NSString stringWithFormat:@"净值时间：%@\n当前总资产：%.2f\n总成本：%.2f\n当前净值：%.2f\n总持仓笔数：%.2f\n当前总收益：%.2f", _categoryItem.curPriceTime, curTotal, _categoryItem.totalPrice, _categoryItem.curPrice, _categoryItem.totalNumber, earn];
+    _headLabel.text = [NSString stringWithFormat:@"%@\n净值时间：%@\n当前总资产：%.2f\n总成本：%.2f\n当前净值：%.2f\n总持仓笔数：%.2f\n当前总收益：%.2f", [EarningUtil calcTodayEarning:_categoryItem],_categoryItem.curPriceTime, curTotal, _categoryItem.totalPrice, _categoryItem.curPrice, _categoryItem.totalNumber, earn];
 }
 
 #pragma - mark IDataChangeExt

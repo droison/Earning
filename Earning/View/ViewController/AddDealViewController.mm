@@ -8,7 +8,7 @@
 
 #import "AddDealViewController.h"
 #import "EarningMainService.h"
-#import "DateFormat.h"
+#import "MMDateFormat.h"
 
 @interface AddDealViewController ()
 {
@@ -95,7 +95,7 @@
     item.categoryLocalId = _categoryItem.localId;
     item.price = [_price.text doubleValue];
     item.number = [_num.text doubleValue];
-    item.dealTime = [DateFormat formatPriceDate:_datePicker.date];
+    item.dealTime = [MMDateFormat formatPriceDate:_datePicker.date];
     item.sell = _switch.on;
     item.fee = [_fee.text floatValue];
     [MainService insertDealItem:item];

@@ -7,7 +7,7 @@
 //
 
 #import "AddCategoryViewController.h"
-#import "DateFormat.h"
+#import "MMDateFormat.h"
 #import "EarningMainService.h"
 
 #define ChooseStockOrFundAlertTag 10001
@@ -116,7 +116,7 @@
     }
     else
     {
-        _categoryItem.curPriceTime = [DateFormat formatPriceDate:[_datePicker date]];
+        _categoryItem.curPriceTime = [MMDateFormat formatPriceDate:[_datePicker date]];
         _categoryItem.curPrice = [_price.text doubleValue];
         [MainService updateCategoryItem:_categoryItem];
         [self.navigationController popViewControllerAnimated:YES];
@@ -133,7 +133,7 @@
         item.name = _name.text;
         item.code = _code.text;
         item.curPrice = [_price.text doubleValue];
-        item.curPriceTime = [DateFormat formatPriceDate:[NSDate date]];
+        item.curPriceTime = [MMDateFormat formatPriceDate:[NSDate date]];
         item.type = buttonIndex == 0? CategoryEnumFund : CategoryEnumStock;
         item.shouldAutoSync = NO;
         [MainService insertCategoryItem:item];

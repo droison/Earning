@@ -10,6 +10,7 @@
 
 @interface BaseTableViewCell ()
 {
+    UIScrollView* _contentScrollView;
     UILabel* _contentLabel;
 }
 
@@ -23,8 +24,8 @@
     if (_contentLabel == nil) {
         _contentLabel = [[UILabel alloc]initWithFrame:self.bounds];
         [_contentLabel setAutoresizingMask:UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight];
-        _contentLabel.textAlignment = NSTextAlignmentCenter;
-        _contentLabel.adjustsFontSizeToFitWidth = YES;
+        _contentLabel.textAlignment = NSTextAlignmentLeft;
+//        _contentLabel.adjustsFontSizeToFitWidth = YES;
         [self addSubview:_contentLabel];
     }
     _contentLabel.text = text;

@@ -11,4 +11,5 @@
 @interface BaseTableViewCell : UITableViewCell
 
 - (void) setContentText:(NSString*)text;
+- (void) setContentColor:(UIColor*)color;
 @end

@@ -61,6 +61,63 @@
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"添加" style:(UIBarButtonItemStylePlain) target:self action:@selector(addNew:)];
 }
 
+- (void) configHeadView
+{
+    if (_dataArray.count == 0) {
+        [_tableview setTableHeaderView:nil];
+        return;
+    }
+    UILabel* head = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, _tableview.width, 0)];
+    head.numberOfLines = 0;
+    
+    BOOL hasToday = YES;
+    BOOL hasGS = NO;
+    double todayEarn = 0;
+    double totalEarn = 0;
+    for (CategoryItem* item in _dataArray)
+    {
+        BOOL isGS = NO;
+        double earn = 0;
+        if (hasToday && [EarningUtil calc:item TodayEarning:&earn isGS:&isGS])
+        {
+            if (isGS) {
+                hasGS = YES;
+            }
+            todayEarn += earn;
+        }
+        else
+        {
+            hasToday = NO;
+        }
+        double curTotal = item.totalNumber * item.curPrice;
+        double curTodayEarn = curTotal - item.totalPrice;
+        totalEarn += curTodayEarn;
+    }
+    NSString* text;
+    if (hasToday)
+    {
+        text = [NSString stringWithFormat:@"今日收益（%@）：%.2f\n全部收益（无估算）：%.2f", hasGS?@"含估算":@"无估算", todayEarn, totalEarn];
+    }
+    else
+    {
+        text = [NSString stringWithFormat:@"总收益（无估算）：%.2f", totalEarn];
+    }
+    head.text = text;
+    [head sizeToFit];
+    if (todayEarn > 0) {
+        [head setTextColor:[UIColor redColor]];
+    }
+    else if (todayEarn == 0)
+    {
+        [head setTextColor:[UIColor blackColor]];
+    }
+    else
+    {
+        [head setTextColor:[UIColor greenColor]];
+    }
+    [_tableview setTableHeaderView:head];
+}
+
 #pragma - mark action
 - (void) editTableView:(id)sender
 {
@@ -102,14 +159,25 @@
     BOOL isGS = NO;
     NSString* pre;
     if ([EarningUtil calc:item TodayEarning:&earn isGS:&isGS]) {
-        pre = [NSString stringWithFormat:@"%@今日%.1f", isGS ?@"[估]" :@"", earn];
+        pre = [NSString stringWithFormat:@"%@今日%.1f-", isGS ?@"[估]" :@"", earn];
     }
     else
     {
         pre = @"";
     }
 
-    [cell setContentText: [NSString stringWithFormat:@"%@-%@(%@)", pre, item.name, item.code]];
+    [cell setContentText: [NSString stringWithFormat:@"%@%@(%@)", pre, item.name, item.code]];
+    if (earn > 0) {
+        [cell setContentColor:[UIColor redColor]];
+    }
+    else if (earn == 0)
+    {
+        [cell setContentColor:[UIColor blackColor]];
+    }
+    else
+    {
+        [cell setContentColor:[UIColor greenColor]];
+    }
     return cell;
 }
 
@@ -146,7 +214,7 @@
     _reloading = NO;
     [_dataArray removeAllObjects];
     [_dataArray addObjectsFromArray:[MainService selectAllCategory]];
-
+    [self configHeadView];
     [_tableview reloadData];
     [_refreshHeaderView egoRefreshScrollViewDataSourceDidFinishedLoading:_tableview];
 }

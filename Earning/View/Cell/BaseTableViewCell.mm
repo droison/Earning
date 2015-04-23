@@ -30,4 +30,11 @@
     }
     _contentLabel.text = text;
 }
+
+- (void) setContentColor:(UIColor*)color
+{
+    if (_contentLabel) {
+        [_contentLabel setTextColor:color];
+    }
+}
 @end
